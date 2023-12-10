@@ -25,7 +25,12 @@ The Meeting Room Booking System that allows users to book meeting rooms, view av
 - Books a meeting room for the specified time range.
 - After Booking mail will send to the one who booked
 
-### 4. Cancel Meeting Room Booking
+### 4. List My Bookings
+- Endpoint: `api/v1/meeting-rooms/my-bookings/`
+- Method: GET
+- Lists all booked meeting rooms history for a requested user.
+
+### 5. Cancel Meeting Room Booking
 - Endpoint: `/api/v1/meeting-rooms/cancel/<int:booking_id>/`
 - Method: DELETE
 - Cancels a previously booked meeting room.
@@ -35,9 +40,9 @@ The Meeting Room Booking System that allows users to book meeting rooms, view av
 - After Cancellation mail will send to the one who booked
 
 
-### 5. Mail send after booking and cancel booking Feature added
+### 6. Mail send after booking and cancel booking Feature added
 
-### 6. Unit Test cases
+### 7. Unit Test cases
 - To run the tests ```python manage.py test```
 
 
