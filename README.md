@@ -13,11 +13,13 @@ The Meeting Room Booking System that allows users to book meeting rooms, view av
 ### 2. List Available Meeting Rooms
 - Endpoint: `/api/v1/meeting-rooms/`
 - Method: GET
+- login required
 - Lists all available meeting rooms based on the specified time range.
 
 ### 3. Book a Meeting Room
 - Endpoint: `/api/v1/meeting-rooms/book/<int:room_id>/`
 - Method: POST
+- login required
 - Parameters:
   - `start_time` (str): Start time of the booking.
   - `end_time` (str): End time of the booking.
@@ -33,6 +35,7 @@ The Meeting Room Booking System that allows users to book meeting rooms, view av
 ### 5. Cancel Meeting Room Booking
 - Endpoint: `/api/v1/meeting-rooms/cancel/<int:booking_id>/`
 - Method: DELETE
+- login required
 - Cancels a previously booked meeting room.
 - Conditions:
   - The meeting room can be canceled only by the user who made the booking.
@@ -53,7 +56,7 @@ The Meeting Room Booking System that allows users to book meeting rooms, view av
    ```bash
    git clone https://github.com/your-username/meeting-room-booking.git
     ```
--  Install dependencies
+-  Installation steps
     ```
    cd meeting-room-booking
    python -m venv venv
@@ -64,5 +67,5 @@ The Meeting Room Booking System that allows users to book meeting rooms, view av
    python manage.py loaddata fixtures/data.json
    ```
 - Note - 
-  need to create user in django-admin for login
+  need to create a user in django-admin to use the booking system
 
